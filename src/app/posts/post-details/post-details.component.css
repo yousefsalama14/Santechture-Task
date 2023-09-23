@@ -1,0 +1,41 @@
+.content-wrapper .content-body {
+  padding: .25rem 1rem;
+  border-left: 3px solid #12486B;
+  line-height: 1.8;
+}
+
+.comment-wrapper {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  gap: 30px;
+}
+
+.comment-wrapper .comment-name {
+  color: rgb(31, 41, 55);
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.comment-wrapper .comment-email {
+  font-size: .875rem;
+  line-height: 1.25rem;
+  color: rgb(107, 114, 128);
+}
+
+.comment-wrapper .comment-body {
+  margin-top: 0.75rem;
+  color: rgb(55, 65, 81);
+  font-size: 1rem;
+}
+
+.comment-logo img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50em;
+}
+
+.comment-content {
+  padding-top: 10px;
+}

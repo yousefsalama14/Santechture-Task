@@ -1,1 +1,32 @@
-/* You can add global styles to this file, and also import other style files */
+/***** Common *****/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.section-gap {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+/***** End Common *****/
+/***** Buttons *****/
+.btn-primary {
+  --bs-btn-bg: #12486B;
+  --bs-btn-border-color: var(--bs-btn-bg);
+  --bs-btn-hover-bg: #22668D;
+  --bs-btn-hover-border-color: var(--bs-btn-hover-bg);
+}
+
+/***** End Buttons *****/

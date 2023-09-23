@@ -1,0 +1,53 @@
+<ng-container *ngIf="isLoading">
+  <section class="section-gap">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-8">
+          <div class="border-round border-1 surface-border p-4 surface-card">
+            <p-skeleton width="100%" height="100vh" borderRadius="1rem"></p-skeleton>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</ng-container>
+<ng-container *ngIf="!isLoading">
+  <section class="section-gap">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-8">
+          <div class="post-wrapper">
+            <div class="post-img-wrapper mb-4">
+              <img
+                src="https://images.unsplash.com/photo-1694813646560-b7afa704f3f2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                alt="Post image" class="mw-100 rounded-4 shadow">
+            </div>
+            <div class="content-wrapper p-4 mb-4">
+              <h2 class="content-title fw-bold text-capitalize mb-3">{{ post?.title }}</h2>
+              <span class="content-body d-flex text-secondary">{{post?.body}}</span>
+            </div>
+            <hr>
+            <div class="comments mt-5">
+              <h2 class="mb-3">Comments</h2>
+              <div *ngFor="let comment of comments" class="comment-wrapper shadow mb-5">
+                <div class="comment-logo">
+                  <img
+                    src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="">
+                </div>
+                <div class="comment-content">
+                  <p>
+                    <span class="fw-bold text-capitalize me-1 comment-name">{{ comment?.name }}</span>
+                    .
+                    "<span class="fw-medium ms-1 comment-email">{{comment?.email }}</span>"
+                  </p>
+                  <p class="comment-body">{{ comment?.body }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</ng-container>

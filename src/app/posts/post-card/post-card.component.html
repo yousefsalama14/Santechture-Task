@@ -1,0 +1,24 @@
+<div class="post-wrapper">
+  <div class="post-img-wrapper">
+    <img
+      src="https://images.unsplash.com/photo-1694813646560-b7afa704f3f2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+      alt="Post image" class="mw-100 rounded-4">
+    <div class="overlay rounded-4"></div>
+    <button type="button" class="btn btn-link edit-btn" (click)="onEdit()">
+      <svg xmlns="http://www.w3.org/2000/svg" height="1.4em" viewBox="0 0 128 512">
+        <path fill="#ffffff"
+          d="M64 360a56 56 0 1 0 0 112 56 56 0 1 0 0-112zm0-160a56 56 0 1 0 0 112 56 56 0 1 0 0-112zM120 96A56 56 0 1 0 8 96a56 56 0 1 0 112 0z" />
+      </svg>
+    </button>
+  </div>
+  <div class="content-wrapper p-4 mb-3 bg-white shadow rounded-4">
+    <h2 class="fw-bold">
+      <a [routerLink]="['/posts/details', post.id]" class="post-title">{{ post?.title }}</a>
+    </h2>
+    <span class="d-block text-sm mb-4">
+      {{post?.body}}</span>
+    <div class="d-flex align-items-center justify-content-end">
+      <a [routerLink]="['/posts/details', post.id]" class="btn btn-primary">Read More</a>
+    </div>
+  </div>
+</div>

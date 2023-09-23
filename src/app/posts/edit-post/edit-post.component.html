@@ -1,0 +1,13 @@
+<form [formGroup]="updateForm" (submit)="submit()">
+  <div class="row">
+    <div class="col-12 mb-3">
+      <input type="text" class="form-control" formControlName="title" placeholder="Enter new title">
+    </div>
+    <div class="col-12 mb-3">
+      <input type="text" class="form-control" formControlName="body" placeholder="Enter new body">
+    </div>
+    <div class="col-12 d-flex">
+      <button class="btn btn-primary ms-auto">Update</button>
+    </div>
+  </div>
+</form>
