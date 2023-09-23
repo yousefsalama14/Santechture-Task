@@ -1,14 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class PostService {
-  private readonly apiUrl = 'https://jsonplaceholder.typicode.com/posts';
-  private readonly commentsUrl =
-    'https://jsonplaceholder.typicode.com/comments';
+  private readonly apiUrl = `${environment.apiUrl}/posts`;
+  private readonly commentsUrl = `${environment.apiUrl}/comments`;
 
   constructor(private http: HttpClient) {}
 
